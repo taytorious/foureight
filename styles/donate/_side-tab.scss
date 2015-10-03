@@ -1,52 +1,85 @@
-.donate {
-	margin-top: -50px;
-	right: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 0;
-    transition: width 0.2s ease-in;
-    background:	$modal-bg;
+.sidebar {
+	position: relative;
+}
+
+.pebble-donate {
+  margin-top: -50px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  transition: width 0.2s ease-in;
+  background:	$modal-bg;
 
 
-	&.active {
-		width: 100%;
-		z-index: 4000;
+  &.active {
+	width: 100%;
+	z-index: 4000;
 
-		.donate__tab {
-			border: none;
-			right: calc(100% - 80px);
-		}
+	.pebble-donate__tab {
+	  border: none;
+	  right: calc(100% - 80px);
 	}
-	@include e(tab) {
-		position: fixed;
-		width: 75px;
-		font-size: 12px;
-		right: -5px;
-		top: $donatePosTop;
-		height: 50px;
-		z-index: 100;
-		border: 1px solid $borderColor;
-		border-right: none;
-		border-radius: 5px;
-		transition: right 0.2s ease-in;
+  }
+  @include e(tab) {
+	position: fixed;
+	background: $donateTabBG;
+	width: 90px;
+	font-size: 12px;
+	right: -5px;
+	top: $donatePosTop;
+	height: 50px;
+	z-index: 100;
+	border: 1px solid $borderColor;
+	border-right: none;
+	border-radius: 5px;
+	transition: right 0.2s ease-in, width 0.2s ease-in;
 
-
-		@include m(link) {
-			font-family: $font-family;
-			color: $linkColor;
-			text-decoration: none;
-			&:hover {
-				text-decoration: none;
-				color: $linkColorHover;
-			}
-			&:active {
-				text-decoration: none;
-				color: $linkColorActive;
-			}
-			div {
-				padding: 16px 5px;
-			}
-		}
+	&:after {
+		width: 10px;
+		position: absolute;
+		height: 100%;
+		right: 0;
+		border-left: 1px solid $borderColor;
 	}
+
+	&:hover {
+	  width: 100px;
+	  div {
+	  	margin-right: 10px;
+	  }
+	}
+
+
+	@include m(link) {
+	  font-family: $font-family;
+	  color: $linkColor;
+	  text-decoration: none;
+	  &:hover {
+		text-decoration: none;
+		color: $linkColorHover;
+	  }
+	  &:active {
+		text-decoration: none;
+		color: $linkColorActive;
+	  }
+	  div {
+		padding: 16px 10px;
+		z-index: 1000;
+		margin-right: 3px;
+		transition: margin 0.2s ease-in;
+		.fa {
+		  font-size: 18px;
+		  float: left;
+		  //margin-top: -2px;
+		}
+
+	  }
+	}
+  }
+
+  @include e(form) {
+
+  }
 }

@@ -1,0 +1,83 @@
+.sidebar {
+  position: relative;
+}
+
+.pebble-donate {
+  margin-top: -50px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  transition: width 0.2s ease-in;
+  background: #f7f7f7;
+}
+
+.pebble-donate.active {
+  width: 100%;
+  z-index: 4000;
+}
+
+.pebble-donate.active .pebble-donate__tab {
+  border: none;
+  right: calc(100% - 80px);
+}
+
+.pebble-donate__tab {
+  position: fixed;
+  background: #de7c00;
+  width: 90px;
+  font-size: 12px;
+  right: -5px;
+  top: 45vh;
+  height: 50px;
+  z-index: 100;
+  border: 1px solid #000000;
+  border-right: none;
+  border-radius: 5px;
+  transition: right 0.2s ease-in, width 0.2s ease-in;
+}
+
+.pebble-donate__tab:after {
+  width: 10px;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  border-left: 1px solid #000000;
+}
+
+.pebble-donate__tab:hover {
+  width: 100px;
+}
+
+.pebble-donate__tab:hover div {
+  margin-right: 10px;
+}
+
+.pebble-donate__tab--link {
+  font-family: "Questrial", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.pebble-donate__tab--link:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+.pebble-donate__tab--link:active {
+  text-decoration: none;
+  color: #000000;
+}
+
+.pebble-donate__tab--link div {
+  padding: 16px 10px;
+  z-index: 1000;
+  margin-right: 3px;
+  transition: margin 0.2s ease-in;
+}
+
+.pebble-donate__tab--link div .fa {
+  font-size: 18px;
+  float: left;
+}

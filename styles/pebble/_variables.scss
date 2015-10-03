@@ -1,13 +1,17 @@
 $font-family: 'Questrial', sans-serif;
 
-$brandLite: #f8c41b;
-$brandDark:  #963695;
+$brandOrange: #de7c00;
+$brandBrown: #5c4738;
+$brandTeal:  #00a79d;
+
+$donateTabBG:  $brandOrange;
+
 
 // Links
 // -------------------------
-$linkColor: $brandDark !default;
-$linkColorHover: $brandLite !default;
-$linkColorActive: $brandLite !default;
+$linkColor: #ffffff !default;
+$linkColorHover: #000000 !default;
+$linkColorActive: #000000 !default;
 $modal-bg: #f7f7f7;
 $donatePosTop: 45vh;
 $borderColor: #000000;
