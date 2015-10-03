@@ -1,4 +1,9 @@
-
+.site-header {
+  position: fixed;
+  &.dark {
+	background-color: $brandPurple;
+  }
+}
 
 @media #{$viewports-xs-sm-med-lg} {
 
@@ -31,5 +36,15 @@
 		}
 
 	}
+}
+
+@media #{$viewports-xl-xxl} {
+
+	.nav-primary {
+		width: auto;
+		box-sizing: border-box;
+		float: left;
+	}
+
 }
 

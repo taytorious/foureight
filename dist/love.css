@@ -1,3 +1,11 @@
+.site-header {
+  position: fixed;
+}
+
+.site-header.dark {
+  background-color: #7268a8;
+}
+
 @media screen and (min-width: 0) and (max-width: 799px) {
   .site-header .wrap {
     padding: 0;
@@ -21,4 +29,48 @@
   .nav-primary ul li a {
     padding-left: 20px !important;
   }
+}
+
+@media screen and (min-width: 799px) {
+  .nav-primary {
+    width: auto;
+    box-sizing: border-box;
+    float: left;
+  }
+}
+
+.nav-donate {
+  width: 10vw;
+  height: 45px;
+  position: fixed;
+  background-color: #00a69c;
+  color: #ffffff;
+  display: flex;
+  /*  @include e(link-wrapper) {
+    height: 50px;
+    div {
+      padding: none !important;
+      background: transparent !important;
+      border: none !important;
+    }
+  }*/
+}
+
+.nav-donate.active {
+  color: #69cef8;
+}
+
+.nav-donate:hover {
+  color: #69cef8;
+}
+
+.donate-modal {
+  width: 0;
+  z-index: 4000;
+  right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #f7f7f7;
 }

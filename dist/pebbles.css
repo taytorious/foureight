@@ -21,7 +21,7 @@
   width: 100%;
   z-index: 4000;
   right: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -32,7 +32,7 @@
   right: calc(100% - 120px);
 }
 
-.pebble-donate.active .fa-angle-left {
+.pebble-donate.active .fa {
   transform: rotate(180deg);
 }
 
@@ -45,9 +45,15 @@
   top: 45vh;
   height: 50px;
   z-index: 100;
-  border: 1px solid #000000;
+  border: 1px solid #5c4738;
   border-right: none;
   border-radius: 5px;
+  transition: right 0.2s ease-in, width 0.2s ease-in;
+  -webkit-transition: right 0.2s ease-in, width 0.2s ease-in;
+  -khtml-transition: right 0.2s ease-in, width 0.2s ease-in;
+  -moz-transition: right 0.2s ease-in, width 0.2s ease-in;
+  -ms-transition: right 0.2s ease-in, width 0.2s ease-in;
+  -o-transition: right 0.2s ease-in, width 0.2s ease-in;
   transition: right 0.2s ease-in, width 0.2s ease-in;
 }
 
@@ -56,7 +62,7 @@
   position: absolute;
   height: 100%;
   right: 0;
-  border-left: 1px solid #000000;
+  border-left: 1px solid #5c4738;
 }
 
 .pebble-donate__tab:hover {
@@ -87,6 +93,12 @@
   padding: 16px 10px;
   z-index: 1000;
   margin-right: 3px;
+  transition: margin 0.2s ease-in;
+  -webkit-transition: margin 0.2s ease-in;
+  -khtml-transition: margin 0.2s ease-in;
+  -moz-transition: margin 0.2s ease-in;
+  -ms-transition: margin 0.2s ease-in;
+  -o-transition: margin 0.2s ease-in;
   transition: margin 0.2s ease-in;
 }
 
