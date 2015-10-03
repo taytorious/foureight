@@ -1,0 +1,103 @@
+@mixin wrap {
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 $gridGutterWidth;
+  @include box-sizing(border-box);
+  @media #{$viewport-sm} {
+    padding: 0 26px;
+  }
+  @media #{$viewport-xs} {
+    padding: 0 12px;
+  }
+}
+
+
+
+// ## BEM Element mixin
+// Elements get appended with "__" and the $name
+// Usage: @include e(elementName);
+@mixin e($name) {
+  &__#{"" + $name} {
+    @content;
+  }
+}
+
+// modifiers get appended with "--" and the $name
+@mixin m($name) {
+  &--#{"" + $name} {
+    @content;
+  }
+}
+
+// Remove default button styles since we use it for layout sometimes.
+@mixin button-reset {
+  padding: 0;
+  border: 0;
+}
+
+// Generial Mixins
+@mixin zero {
+  padding: 0;
+  margin: 0;
+}
+
+
+@mixin vendor($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+@mixin placeholder {
+
+  // IE8
+  &.placeholderjs {
+    opacity: 1;
+    @content;
+  }
+
+  // Webkit
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    @content;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    opacity: 1;
+    @content;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    opacity: 1;
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 1;
+    @content;
+  }
+}
+
+
+
+
+@mixin output-rhythm($property, $values) {
+    $output: ();
+    @each $value in $values {
+      @if unit($value) == px {
+        // Ensure all pixel values are rounded to the nearest pixel.
+        $output: join($output, round($value));
+      }
+      @else {
+        $output: join($output, $value);
+      }
+    }
+    #{$property}: $output;
+}
+

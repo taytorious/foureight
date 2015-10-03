@@ -1,0 +1,32 @@
+// Break Points
+// -------------------------
+$viewport-xs : 'screen and (min-width: 0px) and (max-width: 479px)';
+$viewport-sm : 'screen and (min-width: 480px) and (max-width: 599px)';
+$viewport-med: 'screen and (min-width: 600px) and (max-width: 767px)';
+$viewport-lg : 'screen and (min-width: 768px) and (max-width: 799px)';
+$viewport-xl : 'screen and (min-width: 800px) and (max-width: 969px)';
+$viewport-xxl : 'screen and (min-width: 970px)';
+
+$all-viewports-except-xxl: 'screen and (min-width: 0px) and (max-width: 969px)';
+$all-viewports-except-xl-xxl: 'screen and (min-width: 0px) and (max-width: 799px)';
+$all-viewports-except-xs: 'screen and (min-width: 479px)';
+
+$viewports-xs-sm     : 'screen and (min-width: 0px) and (max-width: 599px)';
+$viewports-xs-sm-med : 'screen and (min-width: 0px) and (max-width: 767px)';
+
+$viewports-sm-med    : 'screen and (min-width: 480px) and (max-width: 767px)';
+$viewports-med-lg    : 'screen and (min-width: 600px) and (max-width: 799px)';
+$viewports-xs-sm-med-lg: 'screen and (min-width: 0) and (max-width: 799px)';
+$viewports-xs-sm-med-lg-xl: 'screen and (min-width: 0) and (max-width: 969px)';
+$viewports-med-lg-xl : 'screen and (min-width: 600px) and (max-width: 969px)';
+$viewports-med-lg-xl-xxl : 'screen and (min-width: 600px)';
+$viewports-sm-med-lg : 'screen and (min-width: 480px) and (max-width: 799px)';
+$viewports-sm-med-lg-xl : 'screen and (min-width: 480px) and (max-width: 969px)';
+$viewports-sm-med-lg-xl-xxl : 'screen and (min-width: 480px)';
+$viewports-lg-xl     : 'screen and (min-width: 768px) and (max-width: 969px)';
+$viewports-lg-xl-xxl : 'screen and (min-width: 768px)';
+$viewports-xl-xxl    : 'screen and (min-width: 799px)';
+
+
+
+
