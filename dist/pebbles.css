@@ -107,6 +107,93 @@
   padding: 0 !important;
 }
 
+h1:hover,
+h1:hover:before,
+h1:hover:after {
+  display: block;
+  border-radius: 2px;
+  width: 2px;
+  height: 2px;
+  -webkit-animation: rip 6s infinite;
+  -moz-animation: rip 6s infinite;
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-backface-visibility: hidden;
+  z-index: -1;
+  position: absolute;
+}
+
+h1:hover:before, h1:hover:after {
+  content: '';
+}
+
+h1:hover:before {
+  top: 15px;
+  left: 0;
+  -webkit-animation-delay: .4s;
+  -moz-animation-delay: .4s;
+}
+
+h1:hover:after {
+  z-index: -1;
+  -webkit-animation-delay: .8s;
+  -moz-animation-delay: .8s;
+  top: 12px;
+  left: 0;
+}
+
+@-webkit-keyframes rip
+{
+  0% {
+    box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
+  }
+  5% {
+    box-shadow: 0 0 0 0 #00a79d, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a79d, 0 0 0 0 rgba(0, 0, 0, 0.08);
+  }
+  75% {
+    box-shadow: 0 0 5px 100px #00a79d, 0 0 10px 105px transparent, 0 0 15px 105px #00a79d, 0 0 10px 115px transparent;
+  }
+}
+
+@-moz-keyframes rip
+{
+  0% {
+    box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
+  }
+  5% {
+    box-shadow: 0 0 0 0 #00a79d, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a79d, 0 0 0 0 rgba(0, 0, 0, 0.08);
+  }
+  75% {
+    box-shadow: 0 0 40px 100px #00a79d, 0 0 10px 105px transparent, 0 0 30px 105px #00a79d, 0 0 5px 115px transparent;
+  }
+}
+
+@-o-keyframes rip
+{
+  0% {
+    box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
+  }
+  5% {
+    box-shadow: 0 0 0 0 #00a79d, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a79d, 0 0 0 0 rgba(0, 0, 0, 0.08);
+  }
+  75% {
+    box-shadow: 0 0 40px 100px #00a79d, 0 0 10px 105px transparent, 0 0 30px 105px #00a79d, 0 0 5px 115px transparent;
+  }
+}
+
+@keyframes rip
+{
+  0% {
+    box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
+  }
+  5% {
+    box-shadow: 0 0 0 0 #00a79d, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a79d, 0 0 0 0 rgba(0, 0, 0, 0.08);
+  }
+  75% {
+    box-shadow: 0 0 40px 100px #00a79d, 0 0 10px 105px transparent, 0 0 30px 105px #00a79d, 0 0 5px 115px transparent;
+  }
+}
+
 .site-header {
   background: #ffffff !important;
 }
