@@ -2,6 +2,10 @@
 	position: relative;
 }
 
+.dummy_wrapper {
+	position: absolute;
+}
+
 .pebble-donate {
   margin-top: -50px;
   right: 0;
@@ -16,10 +20,19 @@
   &.active {
 	width: 100%;
 	z-index: 4000;
+	right: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
 
 	.pebble-donate__tab {
 	  border: none;
-	  right: calc(100% - 80px);
+	  right: calc(100% - 120px);
+	}
+
+	.fa-angle-left {
+		transform: rotate(180deg);
 	}
   }
   @include e(tab) {

@@ -2,3 +2,8 @@
 @import "base/variables";
 @import "base/mixins";
 @import "donate/side-tab";
+@import "pebble/nav";
+
+.site-header {
+  background: #ffffff !important;
+}
