@@ -306,3 +306,19 @@
   background: #de7c00;
   color: #fff;
 }
+
+@media screen and (min-width: 1030px) {
+  .header-image .shrink .site-title > a,
+  .header-image .site-title > a {
+    margin-left: 110px;
+  }
+}
+
+#responsive-menu-icon {
+  text-align: right;
+}
+
+#responsive-menu-icon::before {
+  color: #666;
+  font-size: 30px;
+}
