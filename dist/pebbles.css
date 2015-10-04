@@ -139,18 +139,26 @@
 }
 
 .page-title .wrap,
-.home-widgets-1 .textwidget {
+.home-widgets-1 {
   position: relative;
 }
 
-.page-title .wrap:hover:before,
-.page-title .wrap:hover:after,
-.page-title .wrap:hover h1:before,
-.page-title .wrap:hover h1:after,
-.home-widgets-1 .textwidget:hover:before,
-.home-widgets-1 .textwidget:hover:after,
-.home-widgets-1 .textwidget:hover h1:before,
-.home-widgets-1 .textwidget:hover h1:after {
+.page-title .wrap:before,
+.page-title .wrap:after,
+.page-title .wrap h1:before,
+.page-title .wrap h1:after,
+.page-title .wrap .btn-call-to-action:hover:before,
+.page-title .wrap .btn-call-to-action:hover:after,
+.page-title .wrap .btn-call-to-action:hover span:before,
+.page-title .wrap .btn-call-to-action:hover span:after,
+.home-widgets-1:before,
+.home-widgets-1:after,
+.home-widgets-1 h1:before,
+.home-widgets-1 h1:after,
+.home-widgets-1 .btn-call-to-action:hover:before,
+.home-widgets-1 .btn-call-to-action:hover:after,
+.home-widgets-1 .btn-call-to-action:hover span:before,
+.home-widgets-1 .btn-call-to-action:hover span:after {
   display: block;
   border-radius: 2px;
   width: 2px;
@@ -159,10 +167,6 @@
   -moz-animation: rip 4s infinite;
   -o-animation: rip 4s infinite;
   animation: rip 4s infinite;
-  -webkit-animation-delay: .3s;
-  -moz-animation-delay: .3s;
-  -o-animation-delay: .3s;
-  animation-delay: .3s;
   -webkit-backface-visibility: hidden;
   z-index: -1;
   position: absolute;
@@ -172,31 +176,64 @@
 }
 
 .page-title .wrap:hover:before,
-.home-widgets-1 .textwidget:hover:before {
-  z-index: -2;
+.page-title .wrap:hover:after,
+.page-title .wrap:hover h1:before,
+.page-title .wrap:hover h1:after,
+.home-widgets-1:hover:before,
+.home-widgets-1:hover:after,
+.home-widgets-1:hover h1:before,
+.home-widgets-1:hover h1:after {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.page-title .wrap:before,
+.page-title .wrap .btn-call-to-action:hover:before,
+.home-widgets-1:before,
+.home-widgets-1 .btn-call-to-action:hover:before {
+  z-index: -4;
   margin-left: 5px;
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
+.page-title .wrap:after,
+.page-title .wrap .btn-call-to-action:hover:after,
+.home-widgets-1:after,
+.home-widgets-1 .btn-call-to-action:hover:after {
+  z-index: -2;
+  margin-left: 8px;
   -webkit-animation-delay: .5s;
   -moz-animation-delay: .5s;
   -o-animation-delay: .5s;
   animation-delay: .5s;
 }
 
-.page-title .wrap:hover:after,
-.home-widgets-1 .textwidget:hover:after {
-  margin-left: 8px;
-  -webkit-animation-delay: .9s;
-  -moz-animation-delay: .9s;
-  -o-animation-delay: .9s;
-  animation-delay: .9s;
+.page-title .wrap h1:before,
+.page-title .wrap .btn-call-to-action:hover span:before,
+.home-widgets-1 h1:before,
+.home-widgets-1 .btn-call-to-action:hover span:before {
+  z-index: -3;
+  margin-left: -3px;
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -o-animation-delay: .3s;
+  animation-delay: .3s;
 }
 
-.page-title .wrap:hover h1:before,
-.home-widgets-1 .textwidget:hover h1:before {
-  margin-left: -3px;
-  -webkit-animation-delay: .2s;
-  -moz-animation-delay: .2s;
-  -o-animation-delay: .2s;
-  animation-delay: .2s;
+.page-title .wrap h1:after,
+.page-title .wrap .btn-call-to-action:hover span:after,
+.home-widgets-1 h1:after,
+.home-widgets-1 .btn-call-to-action:hover span:after {
+  margin-left: -8pxpx;
+  -webkit-animation-delay: .8s;
+  -moz-animation-delay: .8s;
+  -o-animation-delay: .8s;
+  animation-delay: .8s;
 }
 
 @-webkit-keyframes rip {
@@ -204,7 +241,7 @@
     box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
   }
   5% {
-    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.2);
   }
   75% {
     box-shadow: 0 0 5px 100px #00a69c, 0 0 10px 105px transparent, 0 0 15px 105px #00a69c, 0 0 10px 115px transparent;
@@ -216,7 +253,7 @@
     box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
   }
   5% {
-    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.2);
   }
   75% {
     box-shadow: 0 0 40px 100px #00a69c, 0 0 10px 105px transparent, 0 0 30px 105px #00a69c, 0 0 5px 115px transparent;
@@ -229,7 +266,7 @@
     box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
   }
   5% {
-    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.2);
   }
   75% {
     box-shadow: 0 0 40px 100px #00a69c, 0 0 10px 105px transparent, 0 0 30px 105px #00a69c, 0 0 5px 115px transparent;
@@ -242,7 +279,7 @@
     box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
   }
   5% {
-    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.2);
   }
   75% {
     box-shadow: 0 0 40px 100px #00a69c, 0 0 10px 105px transparent, 0 0 30px 105px #00a69c, 0 0 5px 115px transparent;
@@ -251,4 +288,21 @@
 
 .site-header {
   background: #ffffff !important;
+}
+
+.gppro-custom .btn.btn-call-to-action {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  color: #de7c00;
+  display: inline-block;
+  width: auto;
+  padding: 5px 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.gppro-custom .btn.btn-call-to-action:hover {
+  background: #de7c00;
+  color: #fff;
 }
