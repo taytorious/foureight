@@ -2,32 +2,40 @@
 	position: relative;
 }
 
-.dummy_wrapper {
-	position: absolute;
-}
 
 .pebble-donate {
   margin-top: -50px;
   right: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
-  width: 0;
-  transition: width 0.2s ease-in;
-  background:	$modal-bg;
+  width: 5px;
+  transition: width 0.2s ease-in, background 0.2s ease-in;
+  background:	$brandLite;
+  border: 1px solid $borderColor;
 
+	&:hover {
+		background: $brandDark;
+		width: 20px;
+		.pebble-donate__tab {
+			right: 18px;
+			background: $brandDark;
+			a {
+				color: #ffffff;
+			}
+		}
+	}
 
   &.active {
 	width: 100%;
+	height: 100%;
 	z-index: 4000;
-	right: 0;
 	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
+	background:	$modal-bg;
 
 	.pebble-donate__tab {
 	  border: none;
+	  background: transparent;
 	  right: calc(100% - 120px);
 	}
 
@@ -35,52 +43,48 @@
 		transform: rotate(180deg);
 	}
   }
+  
   @include e(tab) {
+
+	background: $brandLite;
 	position: fixed;
-	background: $donateTabBG;
-	width: 90px;
+	width: auto;
 	font-size: 12px;
-	right: -5px;
+	right: 4px;
 	top: $donatePosTop;
 	height: 50px;
 	z-index: 100;
 	border: 1px solid $borderColor;
 	border-right: none;
-	border-radius: 5px;
-	transition: right 0.2s ease-in, width 0.2s ease-in;
-	  @include vendor("transition", "right 0.2s ease-in, width 0.2s ease-in");
+	border-radius: 5px 2px 2px 5px;
+	transition: right 0.2s ease-in, color 0.2s ease-in, background 0.2s ease-in;
+	  @include vendor("transition", "right 0.2s ease-in, background 0.2s ease-in");
 
-
-	&:after {
-		width: 10px;
-		position: absolute;
-		height: 100%;
-		right: 0;
-		border-left: 1px solid $borderColor;
-	}
-
-	&:hover {
-	  width: 100px;
-	  div {
-	  	margin-right: 10px;
+	  &:hover {
+		  right: 18px;
+		  background: $brandDark;
+		  a {
+		  	color: #FFFFFF;
+		  }
 	  }
-	}
 
 
 	@include m(link) {
 	  font-family: $font-family;
-	  color: $linkColor;
+	  color: #FFFFFF;
 	  text-decoration: none;
+	  transition: color 0.2s ease-in;
+	  @include vendor("transition","color 0.2s ease-in");
 	  &:hover {
 		text-decoration: none;
-		color: $linkColorHover;
+		color: #FFFFFF;
 	  }
 	  &:active {
 		text-decoration: none;
-		color: $linkColorActive;
+		color: #FFFFFF;
 	  }
 	  div {
-		padding: 16px 10px;
+		padding: 16px 5px;
 		z-index: 1000;
 		margin-right: 3px;
 		transition: margin 0.2s ease-in;
@@ -89,7 +93,7 @@
 		.fa {
 		  font-size: 18px;
 		  float: left;
-		  //margin-top: -2px;
+		  margin: -1px 3px 0 0;
 		}
 
 	  }

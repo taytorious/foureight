@@ -2,33 +2,43 @@
   position: relative;
 }
 
-.dummy_wrapper {
-  position: absolute;
-}
-
 .pebble-donate {
   margin-top: -50px;
-  right: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 0;
-  transition: width 0.2s ease-in;
-  background: #f7f7f7;
-}
-
-.pebble-donate.active {
-  width: 100%;
-  z-index: 4000;
   right: 0;
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  width: 5px;
+  transition: width 0.2s ease-in, background 0.2s ease-in;
+  background: #de7c00;
+  border: 1px solid #5c4738;
+}
+
+.pebble-donate:hover {
+  background: #00a69c;
+  width: 20px;
+}
+
+.pebble-donate:hover .pebble-donate__tab {
+  right: 18px;
+  background: #00a69c;
+}
+
+.pebble-donate:hover .pebble-donate__tab a {
+  color: #ffffff;
+}
+
+.pebble-donate.active {
+  width: 100%;
+  height: 100%;
+  z-index: 4000;
+  position: fixed;
+  background: #f7f7f7;
 }
 
 .pebble-donate.active .pebble-donate__tab {
   border: none;
+  background: transparent;
   right: calc(100% - 120px);
 }
 
@@ -37,60 +47,60 @@
 }
 
 .pebble-donate__tab {
-  position: fixed;
   background: #de7c00;
-  width: 90px;
+  position: fixed;
+  width: auto;
   font-size: 12px;
-  right: -5px;
+  right: 4px;
   top: 45vh;
   height: 50px;
   z-index: 100;
   border: 1px solid #5c4738;
   border-right: none;
-  border-radius: 5px;
-  transition: right 0.2s ease-in, width 0.2s ease-in;
-  -webkit-transition: right 0.2s ease-in, width 0.2s ease-in;
-  -khtml-transition: right 0.2s ease-in, width 0.2s ease-in;
-  -moz-transition: right 0.2s ease-in, width 0.2s ease-in;
-  -ms-transition: right 0.2s ease-in, width 0.2s ease-in;
-  -o-transition: right 0.2s ease-in, width 0.2s ease-in;
-  transition: right 0.2s ease-in, width 0.2s ease-in;
-}
-
-.pebble-donate__tab:after {
-  width: 10px;
-  position: absolute;
-  height: 100%;
-  right: 0;
-  border-left: 1px solid #5c4738;
+  border-radius: 5px 2px 2px 5px;
+  transition: right 0.2s ease-in, color 0.2s ease-in, background 0.2s ease-in;
+  -webkit-transition: right 0.2s ease-in, background 0.2s ease-in;
+  -khtml-transition: right 0.2s ease-in, background 0.2s ease-in;
+  -moz-transition: right 0.2s ease-in, background 0.2s ease-in;
+  -ms-transition: right 0.2s ease-in, background 0.2s ease-in;
+  -o-transition: right 0.2s ease-in, background 0.2s ease-in;
+  transition: right 0.2s ease-in, background 0.2s ease-in;
 }
 
 .pebble-donate__tab:hover {
-  width: 100px;
+  right: 18px;
+  background: #00a69c;
 }
 
-.pebble-donate__tab:hover div {
-  margin-right: 10px;
+.pebble-donate__tab:hover a {
+  color: #FFFFFF;
 }
 
 .pebble-donate__tab--link {
   font-family: "Questrial", sans-serif;
-  color: #ffffff;
+  color: #FFFFFF;
   text-decoration: none;
+  transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+  -khtml-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -ms-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
 }
 
 .pebble-donate__tab--link:hover {
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .pebble-donate__tab--link:active {
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .pebble-donate__tab--link div {
-  padding: 16px 10px;
+  padding: 16px 5px;
   z-index: 1000;
   margin-right: 3px;
   transition: margin 0.2s ease-in;
@@ -105,6 +115,7 @@
 .pebble-donate__tab--link div .fa {
   font-size: 18px;
   float: left;
+  margin: -1px 3px 0 0;
 }
 
 .site-header .wrap {
@@ -160,10 +171,10 @@ h1:hover:after {
     box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
   }
   5% {
-    box-shadow: 0 0 0 0 #00a79d, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a79d, 0 0 0 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.08);
   }
   75% {
-    box-shadow: 0 0 5px 100px #00a79d, 0 0 10px 105px transparent, 0 0 15px 105px #00a79d, 0 0 10px 115px transparent;
+    box-shadow: 0 0 5px 100px #00a69c, 0 0 10px 105px transparent, 0 0 15px 105px #00a69c, 0 0 10px 115px transparent;
   }
 }
 
@@ -173,10 +184,10 @@ h1:hover:after {
     box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
   }
   5% {
-    box-shadow: 0 0 0 0 #00a79d, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a79d, 0 0 0 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.08);
   }
   75% {
-    box-shadow: 0 0 40px 100px #00a79d, 0 0 10px 105px transparent, 0 0 30px 105px #00a79d, 0 0 5px 115px transparent;
+    box-shadow: 0 0 40px 100px #00a69c, 0 0 10px 105px transparent, 0 0 30px 105px #00a69c, 0 0 5px 115px transparent;
   }
 }
 
@@ -186,10 +197,10 @@ h1:hover:after {
     box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
   }
   5% {
-    box-shadow: 0 0 0 0 #00a79d, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a79d, 0 0 0 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.08);
   }
   75% {
-    box-shadow: 0 0 40px 100px #00a79d, 0 0 10px 105px transparent, 0 0 30px 105px #00a79d, 0 0 5px 115px transparent;
+    box-shadow: 0 0 40px 100px #00a69c, 0 0 10px 105px transparent, 0 0 30px 105px #00a69c, 0 0 5px 115px transparent;
   }
 }
 
@@ -199,10 +210,10 @@ h1:hover:after {
     box-shadow: 0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent,                0 0 0 0 transparent;
   }
   5% {
-    box-shadow: 0 0 0 0 #00a79d, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a79d, 0 0 0 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 0 #00a69c, 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 #00a69c, 0 0 0 0 rgba(0, 0, 0, 0.08);
   }
   75% {
-    box-shadow: 0 0 40px 100px #00a79d, 0 0 10px 105px transparent, 0 0 30px 105px #00a79d, 0 0 5px 115px transparent;
+    box-shadow: 0 0 40px 100px #00a69c, 0 0 10px 105px transparent, 0 0 30px 105px #00a69c, 0 0 5px 115px transparent;
   }
 }
 
