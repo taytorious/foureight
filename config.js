@@ -17,6 +17,10 @@ module.exports = {
 		sassconfigDist: {
 			outputStyle: 'compressed'
 		}
+	},
+	js: {
+		src: ['./js/debounce.js','./js/isMobile.js', './js/ScrollListener.js', './js/main.js'],
+		dest: "dist/js"
 	}
 
 

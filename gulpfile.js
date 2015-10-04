@@ -6,15 +6,9 @@ var pkg = require('./package.json'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     minifyCss = require('gulp-minify-css'),
-    autoprefixer = require('gulp-autoprefixer');
-
-/*
- * Create variables for our project paths so we can change in one place
- */
-var paths = {
-	'src':['./models/**/*.js','./routes/**/*.js', 'keystone.js', 'package.json']
-};
-
+    autoprefixer = require('gulp-autoprefixer'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
 
 
 gulp.task('css', function () {
@@ -26,6 +20,13 @@ gulp.task('css', function () {
         .on('error', function(err) {
             gutil.log(err.message);
         });
+});
+
+gulp.task('js', function() {
+    return gulp.src(config.js.src)
+        .pipe(concat('global.js'))
+        .pipe(gulpif(config.env.dist, uglify()))
+        .pipe(gulp.dest(config.js.dest));
 });
 
 /*
