@@ -42,6 +42,14 @@
   right: calc(100% - 120px);
 }
 
+.pebble-donate.active .pebble-donate__tab a {
+  color: #00a69c;
+}
+
+.pebble-donate.active .pebble-donate__tab a:hover {
+  color: #de7c00;
+}
+
 .pebble-donate.active .fa {
   transform: rotate(180deg);
 }

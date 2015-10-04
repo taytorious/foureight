@@ -37,6 +37,13 @@
 	  border: none;
 	  background: transparent;
 	  right: calc(100% - 120px);
+	  a {
+	  	color: $brandDark;
+	  	&:hover {
+	  		color: $brandLite;
+	  	}
+
+	  }
 	}
 
 	.fa {
